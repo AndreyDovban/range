@@ -16,6 +16,8 @@
 	-webkit-appearance: none;
 	appearance: none;
 	background: transparent;
+	margin: 0;
+	padding: 0;
 }
 
 /* нижний инпут, отвечающий за инжнюю границу диапазона */
@@ -26,114 +28,135 @@
 /* блок для диапазона */
 .diapazon {
 	position: absolute;
-	top: 0.9rem;
+	top: 0.95rem;
 
-	height: 0.4rem;
+	height: 0.1rem;
 
-	background: var(--bg-sec);
-	border-radius: 0.25rem;
+	background: transparent;
+	pointer-events: none;
 }
 
 /* блок имитирующий общий трэк */
 .falsetrack {
 	position: absolute;
-	top: 0.9rem;
-	left: 2%;
+	top: 0.95rem;
+	left: 0.53rem;
 
-	width: 96%;
-	height: 0.4rem;
+	width: calc(100% - 1.05rem);
+	height: 0.1rem;
 
 	background: rgb(204 204 207);
 	border-radius: 0.25rem;
 }
 
-/* эффект наведения для трэка */
-.wrap:hover .falsetrack {
-	background: rgb(93 94 96);
-}
-
-/* эффект наведения для диапазона */
-.wrap:hover .diapazon {
-	box-shadow: inset 0 0 0 1px var(--hover);
-}
-
 /* эффект наведения для фишки */
 .input:hover::-moz-range-thumb {
-	border: 2px solid var(--hover);
+	cursor: pointer;
 }
 
 /* эффект наведения для фишки */
 .input:hover::-webkit-slider-thumb {
-	border: 2px solid var(--hover);
+	cursor: pointer;
 }
 
 /* эффект наведения для фишки */
 .input:hover::-ms-thumb {
-	border: 2px solid var(--hover);
+	cursor: pointer;
+}
+
+/* эффект нажатия для фишки */
+.input:active::-moz-range-thumb {
+	cursor: grabbing;
+}
+
+/* эффект нажатия для фишки */
+.input:active::-webkit-slider-thumb {
+	cursor: grabbing;
+}
+
+/* эффект нажатия для фишки */
+.input:active::-ms-thumb {
+	cursor: grabbing;
 }
 
 /* фишка инпута */
 .input::-moz-range-thumb {
-	box-sizing: border-box;
-	width: 1.1rem;
-	height: 1.1rem;
-
 	appearance: none;
-	background: rgb(44 35 81);
-	border: 2px solid var(--white);
-	border-radius: 50%;
+	width: 0;
+	height: 0;
+	border-radius: 0;
+	background: none;
 }
 
 /* фишка верхнего инпута */
 .up::-moz-range-thumb {
-	transform: translateY(0.5rem);
+	transform: translateY(-0.05rem);
+	border-left: 0.55rem solid transparent;
+	border-right: 0.55rem solid transparent;
+	border-top: 1.1rem solid red;
+	border-bottom: none;
 }
 
 /* фишка нижнего интута */
 .down::-moz-range-thumb {
-	transform: translateY(-0.5rem);
+	transform: translateY(0.05rem);
+	border-left: 0.55rem solid transparent;
+	border-right: 0.55rem solid transparent;
+	border-bottom: 1.1rem solid red;
+	border-top: none;
 }
 
 /* фишка инпута */
 .input::-webkit-slider-thumb {
-	box-sizing: border-box;
-	width: 1.1rem;
-	height: 1.1rem;
-
 	appearance: none;
-	background: rgb(44 35 81);
-	border: 2px solid var(--white);
-	border-radius: 50%;
+	width: 0;
+	height: 0;
+	border-radius: 0;
+	background: none;
 }
 
 /* фишка верхнего инпута */
 .up::-webkit-slider-thumb {
-	transform: translateY(0.5rem);
+	transform: translateY(-0.05rem);
+	border-left: 0.55rem solid transparent;
+	border-right: 0.55rem solid transparent;
+	border-top: 1.1rem solid red;
+	border-bottom: none;
 }
 
 /* фишка нижнего интута */
 .down::-webkit-slider-thumb {
-	transform: translateY(-0.5rem);
+	transform: translateY(0.05rem);
+	border-left: 0.55rem solid transparent;
+	border-right: 0.55rem solid transparent;
+	border-bottom: 1.1rem solid red;
+	border-top: none;
 }
 
 /* фишка инпута */
 .input::-ms-thumb {
 	box-sizing: border-box;
-	width: 1.1rem;
-	height: 1.1rem;
-
 	appearance: none;
-	background: rgb(44 35 81);
-	border: 2px solid var(--white);
-	border-radius: 50%;
+	width: 0;
+	height: 0;
+	border-radius: 0;
+	background: none;
 }
 
 /* фишка верхнего инпута */
 .up::-ms-thumb {
-	transform: translateY(0.5rem);
+	transform: translateY(-0.05rem);
+	border-left: 0.55rem solid transparent;
+	border-right: 0.55rem solid transparent;
+	border-top: 1.1rem solid red;
+	border-bottom: none;
 }
 
 /* фишка нижнего интута */
 .down::-ms-thumb {
-	transform: translateY(-0.5rem);
+	transform: translateY(0.05rem);
+	border-left: 0.55rem solid transparent;
+	border-right: 0.55rem solid transparent;
+	border-bottom: 1.1rem solid red;
+	border-top: none;
 }
