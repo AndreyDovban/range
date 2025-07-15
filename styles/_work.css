@@ -49,33 +49,7 @@
 	border-radius: 0.25rem;
 }
 
-/* эффект наведения для фишки */
-.input:hover::-moz-range-thumb {
-	cursor: pointer;
-}
-
-/* эффект наведения для фишки */
-.input:hover::-webkit-slider-thumb {
-	cursor: pointer;
-}
-
-/* эффект наведения для фишки */
-.input:hover::-ms-thumb {
-	cursor: pointer;
-}
-
-/* эффект нажатия для фишки */
-.input:active::-moz-range-thumb {
-	cursor: grabbing;
-}
-
-/* эффект нажатия для фишки */
-.input:active::-webkit-slider-thumb {
-	cursor: grabbing;
-}
-
-/* эффект нажатия для фишки */
-.input:active::-ms-thumb {
+.input:active {
 	cursor: grabbing;
 }
 
